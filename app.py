@@ -3,14 +3,13 @@ import pandas as pd
 import networkx as nx
 from pyvis.network import Network
 import streamlit.components.v1 as components
+import os
 
 st.set_page_config(page_title="Institutional Mapping Tool", layout="wide")
 st.title("US APEC-RISE Institutional Mapping Tool")
 
 # Upload or load data
 uploaded_file = st.file_uploader("Upload your Institutional Mapping CSV", type="csv")
-
-import os
 
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
@@ -20,10 +19,6 @@ elif os.path.exists("sample_institutional_mapping.csv"):
 else:
     st.warning("Please upload a CSV file to begin.")
     st.stop()
-)
-else:
-    st.markdown("Or use the [sample CSV](sandbox:/mnt/data/sample_institutional_mapping.csv)")
-    df = pd.read_csv("sample_institutional_mapping.csv")
 
 # Filter
 economies = ["All"] + sorted(df["Economy"].unique())
