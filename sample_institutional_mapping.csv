@@ -1,0 +1,6 @@
+Institution,Economy,Role,Reform Theme(s),Influence Score,Linkages
+Ministry of Trade,Viet Nam,Coordinator,Customs,5,"Ministry of Finance, Customs Authority"
+Customs Authority,Indonesia,Regulator,Customs,4,"Ministry of Trade, Digital Economy Office"
+Chamber of Commerce,Philippines,Private Sector Partner,Digital,3,Ministry of Trade
+Ministry of Finance,Malaysia,Funding Authority,"Customs, Digital",4,"Ministry of Trade, Customs Authority"
+Digital Economy Office,Thailand,Technical Lead,Digital,5,"Chamber of Commerce, Ministry of Trade"
