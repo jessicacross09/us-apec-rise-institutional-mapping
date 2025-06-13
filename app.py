@@ -10,8 +10,17 @@ st.title("US APEC-RISE Institutional Mapping Tool")
 # Upload or load data
 uploaded_file = st.file_uploader("Upload your Institutional Mapping CSV", type="csv")
 
+import os
+
 if uploaded_file:
     df = pd.read_csv(uploaded_file)
+elif os.path.exists("sample_institutional_mapping.csv"):
+    df = pd.read_csv("sample_institutional_mapping.csv")
+    st.success("Loaded sample dataset.")
+else:
+    st.warning("Please upload a CSV file to begin.")
+    st.stop()
+)
 else:
     st.markdown("Or use the [sample CSV](sandbox:/mnt/data/sample_institutional_mapping.csv)")
     df = pd.read_csv("sample_institutional_mapping.csv")
