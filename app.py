@@ -5,7 +5,7 @@ from pyvis.network import Network
 import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Institutional Mapping Tool", layout="wide")
-st.title("APEC-RISE Institutional Mapping Tool")
+st.title("US APEC-RISE Institutional Mapping Tool")
 
 # Upload or load data
 uploaded_file = st.file_uploader("Upload your Institutional Mapping CSV", type="csv")
